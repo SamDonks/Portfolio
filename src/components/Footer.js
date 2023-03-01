@@ -14,7 +14,7 @@ function Footer() {
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>Designed and Developed by Samuel Doncaster</h3>
+          <h3>Designed and Developed by Donks#1048</h3>
         </Col>
         <Col md="4" className="footer-copywright">
           <h3>Copyright © {year} SD</h3>
@@ -32,14 +32,6 @@ function Footer() {
               </a>
             </li>
             <li className="social-icons">
-              <a
-                href="http://linkedin.com/in/samuel-doncaster/"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn />
-              </a>
             </li>
           </ul>
         </Col>

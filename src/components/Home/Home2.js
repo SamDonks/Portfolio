@@ -23,17 +23,13 @@ function Home2() {
               <br />
               <br />I am fluent in classic languages like
               <i>
-                <b className="purple"> Python, Javascript and Golang </b>
+                <b className="purple"> Python, Javascript, HTML and CSS </b>
               </i>
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
+              My field of Interest's are building new 
               <i>
-                <b className="purple">Websites and Softwares </b> and
-                also in areas related to{" "}
-                <b className="purple">
-                  AI and Machine Learning.
-                </b>
+                <b className="purple">Websites and learning new and better ways to do make them </b>
               </i>
               <br />
               <br />
