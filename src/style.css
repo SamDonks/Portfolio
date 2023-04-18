@@ -539,6 +539,28 @@ button:focus {
 }
 
 /* --------- */
+/* Contact Me */
+/* --------- */
+.contact-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+}
+
+.contact-heading {
+  color: white !important;
+  font-size: 2.3em !important;
+  font-weight: 500 !important;
+  padding-top: 10px !important;
+}
+
+.form-labels {
+  text-align: left!important;
+}
+
+
+/* --------- */
 /* About */
 /* --------- */
 
