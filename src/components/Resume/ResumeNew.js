@@ -9,7 +9,7 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const resumeLink =
-  "https://raw.githubusercontent.com/donkeyboy223/portfolio/master/src/Assets/otta_cv.pdf";
+  "https://raw.githubusercontent.com/DonkeyBoy223/Portfolio/main/src/Assets/otta_cv.pdf";
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);

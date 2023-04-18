@@ -1,45 +1,73 @@
-import React from 'react'
+import React, { useState, useRef  } from 'react';
+import emailjs from 'emailjs-com';
 import Particle from "../Particle";
 import { Container, Row, Col } from "react-bootstrap";
-import Form from 'react-bootstrap/Form';
+import './contactme.css';
 
-function ContactMe() {
+
+function EmailForm() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const form = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const serviceId = 'service_p2ofkr5'; // Replace with your email service ID
+    const templateId = 'template_y74ppkd'; // Replace with your email template ID
+    const userId = '97KFSanqvK-Qf8E56'; // Replace with your email user ID
+
+    emailjs.send(serviceId, templateId, {
+      from_name: name,
+      reply_to: email,
+      message: message,
+    }, userId)
+      .then(() => {
+        console.log('Email sent successfully!');
+        alert('Email sent!')
+      })
+      .catch((err) => {
+        console.error('Email failed to send:', err);
+      });
+
+    // Clear the form fields
+    setName('');
+    setEmail('');
+    setMessage('');
+  };
+
   return (
+    <div>
     <Container fluid className="contact-section">
-      <Particle />
-      <Container>
         <h1 className="contact-heading">
           How to <strong className="purple">Contact me </strong>
         </h1>
         <p style={{ color: "white" }}>
           The form below is how you can contact me to build you a website.
         </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-            <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label class='form-labels'>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
-            </Form.Group>
-
-            <Form.Group className="mb-3">
-                <Form.Label>Disabled select menu</Form.Label>
-                <Form.Select>
-                <option>Disabled select</option>
-                <option>Disabled select</option>
-                <option>cheese select</option>
-                <option>Disabled select</option>
-                </Form.Select>
-            </Form.Group>
-            </Form>
-        </Row>
-      </Container>
+    <form  onSubmit={handleSubmit}>
+      <label>
+        Name:
+        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+      </label>
+      <br />
+      <label>
+        Email:
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+      </label>
+      <br />
+      <label>
+        Message:
+        <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
+      </label>
+      <br />
+      <button type="submit">Send</button>
+    </form>
+    <Particle />
     </Container>
-  )
+    </div>
+  );
 }
 
-export default ContactMe
+export default EmailForm;

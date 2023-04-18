@@ -544,7 +544,7 @@ button:focus {
 .contact-section {
   position: relative !important;
   padding-top: 150px !important;
-  padding-bottom: 30px !important;
+  padding-bottom: 160px !important;
   background-image: var(--section-background-color) !important;
 }
 

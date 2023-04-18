@@ -17,6 +17,7 @@ import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ResumeNew from "./components/Resume/ResumeNew";
+import Particle from "./components/Particle";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -33,6 +34,7 @@ function App() {
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
+        
         <Navbar />
         <ScrollToTop />
         <Routes>
