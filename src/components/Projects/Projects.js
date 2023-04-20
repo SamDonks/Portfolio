@@ -11,6 +11,7 @@ import ghostraffles from '../../Assets/Projects/ghostraffles.PNG';
 import ghostproxies from '../../Assets/Projects/ghostproxies.PNG';
 import vision from '../../Assets/Projects/vision.PNG';
 import bulletmarketing from '../../Assets/Projects/bulletmarketing.PNG';
+import iceyisps from '../../Assets/Projects/iceyisps.PNG';
 import bitsOfCode from "../../Assets/Projects/blog.png";
 
 function Projects() {
@@ -74,6 +75,17 @@ function Projects() {
               description="Website created using ReactJS allow users to purchase proxies and then view them on there own personal dashboard, aswell as there being a seperate dashboard for an Admin to see to oversee everything."
               ghLink="https://github.com/donkeyboy223/"
               demoLink="https://www.ghostproxies.co.uk/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={iceyisps}
+              isBlog={false}
+              title="IceyIsps"
+              description="This website created using ReactJS, allowed users to login with discord to purchase 'proxies' and then view them on there personal dashboard, also there being an seperate admin dashboard to be able to view everyones orders, which was protected using JWT tokens."
+              ghLink="https://github.com/donkeyboy223/"
+              demoLink="https://www.iceyisps.com/"
             />
           </Col>
 
